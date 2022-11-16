@@ -1,0 +1,140 @@
+header {
+  display: grid;
+  color: gray;
+  max-width: 100%;
+  grid-template-columns: auto;
+  font-size: 16px;
+}
+.logotype:hover {
+  width: "250px";
+  height: "100px";
+}
+.links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-ref {
+  position: relative;
+  text-decoration: none;
+  color: #a0a0a0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+.link-ref:after {
+  content: "";
+  position: absolute;
+  background-color: cornflowerblue;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.link-ref:hover {
+  color: gray;
+}
+.link-ref:hover:after {
+  width: 100%;
+}
+
+#Gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pic1 {
+  width: 30vw;
+  height: 40vw;
+  object-fit: cover;
+}
+
+.gallPic2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.pic2 {
+  width: calc(60vw + 60px);
+  height: 40vw;
+  object-fit: cover;
+}
+.gallPic-wrap {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100%;
+}
+input,
+.area {
+  width: 500px;
+}
+.forms {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom {
+  width: 100px;
+}
+.mine {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 50px;
+  align-items: center;
+  height: 540px;
+}
+.my {
+  width: 480px;
+  height: 320px;
+  box-shadow: 5px 5px 5px 5px lightblue;
+}
+.col-md-4:hover {
+  box-shadow: 3px 3px 3px 3px cornflowerblue;
+}
+
+@media screen and (max-width: 700px) {
+  #Gallery {
+    grid-template-columns: auto auto;
+  }
+  .gallPic3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #Gallery {
+    grid-template-columns: auto;
+  }
+  .gallPic3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .gallPic2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .pic1 {
+    width: 90vw;
+    height: 120vw;
+  }
+  .pic2 {
+    width: 90vw;
+    height: 80vw;
+  }
+}

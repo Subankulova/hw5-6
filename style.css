@@ -142,4 +142,7 @@ input,
     flex-direction: column;
     width: 320px;
   }
+  main {
+    min-height: 1200px;
+  }
 }
